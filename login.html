@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AVA</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="imagens/logo-p.png" type="image/png">
+    <script src="https://kit.fontawesome.com/d3b24fe173.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="formulario" >
+            <h1 id="titulo">Login</h1>
+
+            <form action="">
+
+                <div class="input-group">
+
+                  <div class="input-field" id="nomefield">
+                    <i class="fa-solid fa-user" style="color: #003a9e;"></i>
+                    <input type="text" placeholder="Nome">
+                  </div>  
+
+                  <div class="input-field">
+                    <i class="fa-solid fa-envelope" style="color: #003a9e;"></i>
+                    <input type="email" placeholder="Email">
+                  </div> 
+
+                  <div class="input-field">
+                    <i class="fa-solid fa-lock" style="color: #003a9e;"></i>
+                    <input type="password" placeholder="Senha">
+                  </div> 
+                  <p>Esqueceu a senha? <a href="#">clique aqui!</a> </p>
+
+                </div>
+                <div class="bnt-field">
+                    <button type="button" id="entrarbnt">Entrar</button>
+                    <button type="button" class="desativado" id="cadastrebnt">Cadastre-se</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+<script>
+  let entrarbnt = document.getElementById("entrarbnt");
+  let cadastrebnt = document.getElementById("cadastrebnt");
+  let nomefield = document.getElementById("nomefield");
+  let titulo = document.getElementById("titulo");
+
+entrarbnt.onclick = function(){
+  nomefield.style.maxHeight = "0";
+  titulo.innerHTML = "Entrar";
+  entrarbnt.classList.add("desativado");
+  cadastrebnt.classList.remove("desativado");
+}
+cadastrebnt.onclick = function(){
+  nomefield.style.maxHeight = "60px";
+  titulo.innerHTML = "Cadastre-se";
+  entrarbnt.classList.remove("desativado");
+  cadastrebnt.classList.add("desativado");
+}
+
+
+</script>
+
+</body>
+</html>
